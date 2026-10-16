@@ -95,7 +95,7 @@ Datos del catálogo: singles $17.99 / $19.99 · B1 $29.99 · B2 $44.99 · B3 $64
 |---|---|---|---|
 | Página del producto estrella | Selector de 4 ofertas (single → B1 → B2 → B3) con B1 preseleccionado | $17.99→$64.99 | ✅ Implementado |
 | Carrito (drawer) | Barra de envío gratis + nota de paquetes separados | — | ✅ Implementado |
-| Carrito (página) | Bloque "Complete your setup" (cross-sell de producto) + barra de envío | — | ✅ Implementado |
+| Carrito (página) | Bloque "BUNDLES" (cross-sell de producto) + barra de envío | — | ✅ Implementado |
 | Checkout | No tocar (Shopify limita upsells nativos; no meter apps en checkout para no romper confianza) | — | — |
 | Post-compra | Página de agradecimiento: bloque de pedido con "Add cable clips to your next order"? No recomendado en fase 1. Cuando haya tráfico: one-click upsell de cord clips solo si validas que llega en paquete separado | $24.99 | Fase 2 |
 
@@ -133,13 +133,13 @@ Con $100 y ~$1–1.5 CPM móvil, tendrás ~1,500–3,000 impresiones y pocas dec
 - **Versión A:** oferta preseleccionada = **Single** ($17.99).
 - **Versión B:** oferta preseleccionada = **Comfort Duo** ($29.99, "Most popular").
 
-Cambio en 30 segundos: editor del tema → sección "Choose your setup" → oferta B1 → "Selected by default". Mide **AOV y bundle attach rate**, no CVR. Si B no baja la conversión y sube el AOV, quédate con B.
+Cambio en 30 segundos: editor del tema → sección "BUNDLES" → oferta B1 → "Selected by default". Mide **AOV y bundle attach rate**, no CVR. Si B no baja la conversión y sube el AOV, quédate con B.
 
 ---
 
 ## 8. Textos (inglés) implementados
 
-- Sección: **Choose your setup** — _One-click bundles. Free US shipping on orders over $29._
+- Sección: **BUNDLES** — _One-click bundles. Free US shipping on orders over $29._
 - **Just the mouse wrist rest** — _One Ergonomic Mouse Wrist Rest Pad for your current setup._ · $17.99
 - **The Comfort Duo** `MOST POPULAR` — _Mouse + keyboard wrist rest. The classic desk comfort upgrade._ · $29.99 · ~~$37.98~~ · **Save $7.99**
 - **The Complete Desk Setup** — _Both wrist rests + 8 magnetic cable clips to keep your desk tidy._ · $44.99 · ~~$70.96~~ · **Save $25.97** · ✓ _Free magic cleaning cloth included ($7.99 value)_
@@ -169,12 +169,12 @@ Sin promesas médicas: solo "comfort", "support", "upgrade".
 ## 10. Estado de implementación en el tema
 
 - [x] Paleta de marca aplicada (#171717 / #F7F7F5 / #C5C7C9 / #777C80) y tipografías Manrope + Inter
-- [x] Sección "Bundle offers" con 4 ofertas, ahorro, badge y add-to-cart sin app (`sections/bundle-offers.liquid` + `assets/bundle-offers.js`)
+- [x] Sección "BUNDLES" con 4 ofertas, ahorro, badge y add-to-cart sin app (`sections/bundle-offers.liquid` + `assets/bundle-offers.js`)
 - [x] Precios de bundles actualizados ($29.99 / $44.99 / $64.99)
 - [x] Barra de envío gratis umbral $29 en drawer y carrito (`snippets/free-shipping-bar.liquid`)
 - [x] Nota de paquetes separados en carrito y página de producto
 - [x] Announcement bar: "Free US shipping on orders over $29" + eslogan
-- [x] Cross-sell del carrito renombrado a "Complete your setup"
+- [x] Cross-sell del carrito renombrado a "BUNDLES"
 - [ ] **Tú:** crear los 3 productos bundle en Shopify y asignarlos en el editor del tema
 - [ ] **Tú:** configurar la tarifa de envío gratis ≥ $29 en Shopify Shipping
 - [ ] **Tú:** verificar muestra y crear las creatividades
