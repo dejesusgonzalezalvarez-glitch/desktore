@@ -1149,11 +1149,46 @@
         "padding-block-start": 56,
         "padding-block-end": 56
       }
+    },
+    "product_infographics_Ergo": {
+      "type": "product-infographics",
+      "blocks": {
+        "image_features": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/ergonomic-mouse-wrist-rest-features.jpg"
+          }
+        },
+        "image_design": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/ergonomic-mouse-wrist-rest-ergonomic-design.jpg"
+          }
+        },
+        "image_quality": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/ergonomic-mouse-wrist-rest-quality-details.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "image_features",
+        "image_design",
+        "image_quality"
+      ],
+      "settings": {
+        "heading": "",
+        "gap": 12,
+        "padding-block-start": 0,
+        "padding-block-end": 48
+      }
     }
   },
   "order": [
     "main",
     "bundle_offers_TDxrPd",
+    "product_infographics_Ergo",
     "section_hW6xre",
     "section_Vz7MXL",
     "section_VpmApr",
