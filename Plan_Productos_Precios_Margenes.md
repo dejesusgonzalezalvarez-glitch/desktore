@@ -94,6 +94,7 @@ Datos del catálogo: singles $17.99 / $19.99 · B1 $29.99 · B2 $44.99 · B3 $64
 | Punto de contacto | Qué ofrecer | Precio | Estado |
 |---|---|---|---|
 | Página del producto estrella | Selector de 4 ofertas (single → B1 → B2 → B3) con B1 preseleccionado | $17.99→$64.99 | ✅ Implementado |
+| Página de producto (template por defecto) | Mismo selector en todos los demás productos, con título/descripción adaptados al producto actual (`{title}`) | — | ✅ Implementado |
 | Carrito (drawer) | Barra de envío gratis + nota de paquetes separados | — | ✅ Implementado |
 | Carrito (página) | Bloque "BUNDLES" (cross-sell de producto) + barra de envío | — | ✅ Implementado |
 | Checkout | No tocar (Shopify limita upsells nativos; no meter apps en checkout para no romper confianza) | — | — |
@@ -175,6 +176,7 @@ Sin promesas médicas: solo "comfort", "support", "upgrade".
 - [x] Nota de paquetes separados en carrito y página de producto
 - [x] Announcement bar: "Free US shipping on orders over $29" + eslogan
 - [x] Cross-sell del carrito renombrado a "BUNDLES"
+- [x] Selector de bundles en el template por defecto (todos los productos), con copia adaptativa `{title}` por producto
 - [ ] **Tú:** crear los 3 productos bundle en Shopify y asignarlos en el editor del tema
 - [ ] **Tú:** configurar la tarifa de envío gratis ≥ $29 en Shopify Shipping
 - [ ] **Tú:** verificar muestra y crear las creatividades

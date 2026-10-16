@@ -111,7 +111,7 @@
               <span class="bundle-offers__offer-body">
                 <span class="bundle-offers__offer-top">
                   <span class="bundle-offers__offer-title">
-                    {{ block.settings.title | default: offer_product.title }}
+                    {{ block.settings.title | replace: '{title}', offer_product.title | default: offer_product.title }}
                   </span>
 
                   {%- if block.settings.badge != blank -%}
@@ -120,7 +120,7 @@
                 </span>
 
                 {%- if block.settings.description != blank -%}
-                  <span class="bundle-offers__offer-description">{{ block.settings.description }}</span>
+                  <span class="bundle-offers__offer-description">{{ block.settings.description | replace: '{title}', offer_product.title }}</span>
                 {%- endif -%}
 
                 <span class="bundle-offers__offer-pricing">
