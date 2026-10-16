@@ -1,0 +1,132 @@
+{% doc %}
+  Renders the free shipping progress bar for the cart drawer and the cart page.
+
+  Uses the theme settings `free_shipping_enabled`, `free_shipping_threshold`,
+  `free_shipping_message`, `free_shipping_success_message` and `cart_shipping_note`.
+
+  The bar re-renders automatically on cart updates because both the cart drawer and the
+  cart page morph their section HTML from the Section Rendering API response.
+{% enddoc %}
+
+{%- if settings.free_shipping_enabled and settings.free_shipping_threshold > 0 and cart.item_count > 0 -%}
+  {%- liquid
+    assign threshold_cents = settings.free_shipping_threshold | times: 100
+    assign remaining_cents = threshold_cents | minus: cart.total_price
+
+    if remaining_cents <= 0
+      assign unlocked = true
+      assign remaining_cents = 0
+    else
+      assign unlocked = false
+    endif
+
+    assign remaining_money = remaining_cents | money
+    assign progress = cart.total_price | times: 100.0 | divided_by: threshold_cents | at_most: 100 | at_least: 0
+    assign fill_width = progress | at_least: 6 | at_most: 100
+
+    if unlocked
+      assign bar_message = settings.free_shipping_success_message
+    else
+      assign bar_message = settings.free_shipping_message | replace: '{{ amount }}', remaining_money
+    endif
+  -%}
+
+  <div
+    class="free-shipping-bar{% if unlocked %} free-shipping-bar--unlocked{% endif %}"
+    role="status"
+    aria-live="polite"
+    data-free-shipping-bar
+  >
+    <p class="free-shipping-bar__message">
+      <span
+        class="free-shipping-bar__icon"
+        aria-hidden="true"
+      >
+        {%- if unlocked -%}
+          {{- 'icon-checkmark.svg' | inline_asset_content -}}
+        {%- else -%}
+          {{- 'icon-cart.svg' | inline_asset_content -}}
+        {%- endif -%}
+      </span>
+      <span class="free-shipping-bar__text">{{ bar_message | escape }}</span>
+    </p>
+
+    <div
+      class="free-shipping-bar__track"
+      role="progressbar"
+      aria-valuemin="0"
+      aria-valuemax="100"
+      aria-valuenow="{{ progress | round }}"
+      aria-label="{{ bar_message | escape }}"
+    >
+      <div
+        class="free-shipping-bar__fill"
+        style="width: {{ fill_width }}%;"
+      ></div>
+    </div>
+
+    {%- if settings.cart_shipping_note != blank -%}
+      <p class="free-shipping-bar__note">{{ settings.cart_shipping_note | escape }}</p>
+    {%- endif -%}
+  </div>
+{%- endif -%}
+
+{% stylesheet %}
+  .free-shipping-bar {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-xs, 8px);
+    width: 100%;
+    padding-block-end: var(--padding-xs, 8px);
+  }
+
+  .free-shipping-bar__message {
+    display: flex;
+    align-items: center;
+    gap: var(--gap-2xs, 6px);
+    margin: 0;
+    font-size: var(--font-size--sm, 0.875rem);
+    font-weight: 500;
+    color: var(--color-foreground);
+  }
+
+  .free-shipping-bar__icon {
+    display: inline-flex;
+    flex-shrink: 0;
+    width: 1.125rem;
+    height: 1.125rem;
+  }
+
+  .free-shipping-bar__icon svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  .free-shipping-bar__track {
+    position: relative;
+    height: 6px;
+    border-radius: 999px;
+    overflow: hidden;
+    background-color: rgb(var(--color-foreground-rgb) / 0.12);
+  }
+
+  .free-shipping-bar__fill {
+    height: 100%;
+    border-radius: inherit;
+    background-color: var(--color-foreground);
+    transition: width 0.35s ease;
+  }
+
+  .free-shipping-bar__note {
+    margin: 0;
+    font-size: var(--font-size--2xs, 0.75rem);
+    line-height: 1.4;
+    color: #777c80;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .free-shipping-bar__fill {
+      transition: none;
+    }
+  }
+{% endstylesheet %}
