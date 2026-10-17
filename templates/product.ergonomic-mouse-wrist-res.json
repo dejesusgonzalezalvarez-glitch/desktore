@@ -1095,7 +1095,7 @@
           "type": "offer",
           "settings": {
             "use_current_product": false,
-            "product": "shopify://products/the-comfort-duo",
+            "product": "the-comfort-duo",
             "title": "The Comfort Duo",
             "description": "Mouse + keyboard wrist rest combo. The classic desk comfort upgrade.",
             "badge": "Most popular",
@@ -1109,7 +1109,7 @@
           "type": "offer",
           "settings": {
             "use_current_product": false,
-            "product": "shopify://products/the-complete-desk-setup",
+            "product": "the-complete-desk-setup",
             "title": "The Complete Desk Setup",
             "description": "Mouse + keyboard wrist rest + magic cleaning cloth, all in one bundle.",
             "badge": "",
