@@ -66,6 +66,16 @@
 
               assign offer_variant = offer_product.selected_or_first_available_variant
 
+              echo '<!--dbg '
+              echo block.id
+              echo ' use_current='
+              echo block.settings.use_current_product
+              echo ' product='
+              echo block.settings.product
+              echo ' variant='
+              echo offer_variant.id
+              echo '-->'
+
               if offer_variant == blank
                 continue
               endif
