@@ -16,7 +16,7 @@
           "type": "text",
           "name": "t:names.text",
           "settings": {
-            "text": "<p>Ergonomic mouse wrist rest pads offer comfortable support for your wrist.</p>",
+            "text": "<p>Long desk hours shouldn't hurt. Find the small upgrades that make everyday work more comfortable.</p>",
             "width": "100%",
             "max_width": "none",
             "alignment": "left",
@@ -42,7 +42,7 @@
           "type": "button",
           "name": "t:names.button",
           "settings": {
-            "label": "Shop now",
+            "label": "Find your comfort",
             "link": "shopify://collections/all",
             "open_in_new_tab": false,
             "style_class": "button-custom",
@@ -186,7 +186,7 @@
             "text_3MikPU": {
               "type": "text",
               "settings": {
-                "text": "<p>Ergonomic pad with silicone gel cushioning and non-slip base, available in multiple color and size options</p>",
+                "text": "<p>Soft silicone gel cushioning with a non-slip base. Available in multiple colors and sizes — a tiny upgrade your wrist will notice every day.</p>",
                 "width": "fit-content",
                 "max_width": "narrow",
                 "alignment": "left",
@@ -286,7 +286,7 @@
         "text_U6VQEi": {
           "type": "text",
           "settings": {
-            "text": "<p>These wrist rest pads provide soft silicone gel cushioning to reduce wrist strain during extended computer use. They feature a non-slip design to stay securely in place.</p>",
+            "text": "<p>Because the small details are what make the difference. From wrists to wires, we hand-pick the little upgrades that quietly make your desk — and your day — feel better.</p>",
             "width": "100%",
             "max_width": "narrow",
             "alignment": "center",
@@ -311,7 +311,7 @@
         "button_Ej8QYW": {
           "type": "button",
           "settings": {
-            "label": "Shop now",
+            "label": "Shop the essentials",
             "link": "shopify://collections/all",
             "open_in_new_tab": false,
             "style_class": "button-custom",
