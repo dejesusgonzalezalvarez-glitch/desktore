@@ -1095,11 +1095,11 @@
           "type": "offer",
           "settings": {
             "use_current_product": false,
-            "product": "",
+            "product": "the-comfort-duo",
             "title": "The Comfort Duo",
-            "description": "Mouse + keyboard wrist rest. The classic desk comfort upgrade.",
+            "description": "Mouse + keyboard wrist rest combo. The classic desk comfort upgrade.",
             "badge": "Most popular",
-            "compare_price": 37.98,
+            "compare_price": 63.59,
             "gift_note": "",
             "highlight": true,
             "default_selected": false
@@ -1109,36 +1109,21 @@
           "type": "offer",
           "settings": {
             "use_current_product": false,
-            "product": "",
+            "product": "the-complete-desk-setup",
             "title": "The Complete Desk Setup",
-            "description": "Both wrist rests + 8 magnetic cable clips to keep your desk tidy.",
+            "description": "Mouse + keyboard wrist rest + magic cleaning cloth, all in one bundle.",
             "badge": "",
-            "compare_price": 70.96,
-            "gift_note": "Free magic cleaning cloth included ($7.99 value)",
+            "compare_price": 84.25,
+            "gift_note": "",
             "highlight": false,
             "default_selected": false
           }
         },
-        "offer_pro": {
-          "type": "offer",
-          "settings": {
-            "use_current_product": false,
-            "product": "",
-            "title": "The Pro Desk Setup",
-            "description": "Both wrist rests + magnetic cable clips + 16 silicone cable ties.",
-            "badge": "",
-            "compare_price": 95.95,
-            "gift_note": "Free magic cleaning cloth included ($7.99 value)",
-            "highlight": false,
-            "default_selected": false
-          }
-        }
       },
       "block_order": [
         "offer_single",
         "offer_duo",
-        "offer_complete",
-        "offer_pro"
+        "offer_complete"
       ],
       "settings": {
         "heading": "BUNDLES",
