@@ -1082,6 +1082,7 @@
           "settings": {
             "use_current_product": true,
             "product": "",
+            "image": "shopify://shop_images/img1.jpg",
             "title": "Just the mouse wrist rest",
             "description": "One Ergonomic Mouse Wrist Rest Pad for your current setup.",
             "badge": "",
@@ -1096,6 +1097,7 @@
           "settings": {
             "use_current_product": false,
             "product": "the-comfort-duo",
+            "image": "shopify://shop_images/bundle-comfort-duo.jpg",
             "title": "The Comfort Duo",
             "description": "Mouse + keyboard wrist rest combo. The classic desk comfort upgrade.",
             "badge": "Most popular",
@@ -1110,6 +1112,7 @@
           "settings": {
             "use_current_product": false,
             "product": "the-complete-desk-setup",
+            "image": "shopify://shop_images/bundle-complete-desk-setup.jpg",
             "title": "The Complete Desk Setup",
             "description": "Mouse + keyboard wrist rest + magic cleaning cloth, all in one bundle.",
             "badge": "",

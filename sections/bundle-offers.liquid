@@ -108,6 +108,18 @@
                 {% endif %}
               >
 
+              {%- liquid
+                assign offer_image = block.settings.image
+                if offer_image == blank
+                  assign offer_image = offer_product.featured_image
+                endif
+              -%}
+              {%- if offer_image != blank -%}
+                <span class="bundle-offers__offer-image">
+                  {{ offer_image | image_url: width: 480 | image_tag: loading: 'lazy', widths: '240, 360, 480', sizes: '(min-width: 750px) 33vw, 100vw' }}
+                </span>
+              {%- endif -%}
+
               <span class="bundle-offers__offer-body">
                 <span class="bundle-offers__offer-top">
                   <span class="bundle-offers__offer-title">
@@ -218,13 +230,49 @@
     cursor: pointer;
     background-color: var(--color-background, #f7f7f5);
     transition:
-      border-color 0.15s ease,
-      box-shadow 0.15s ease,
-      background-color 0.15s ease;
+      border-color 0.2s ease,
+      box-shadow 0.25s ease,
+      background-color 0.2s ease,
+      transform 0.25s ease;
   }
 
   .bundle-offers__offer:hover {
     border-color: #171717;
+  }
+
+  .bundle-offers__offer-image {
+    display: block;
+    margin-block-end: 0.875rem;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    background-color: #ffffff;
+  }
+
+  .bundle-offers__offer-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 2 / 1;
+    object-fit: contain;
+    transition: transform 0.4s ease;
+  }
+
+  @media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+    .bundle-offers__offer:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 28px rgba(23, 23, 23, 0.12);
+    }
+
+    .bundle-offers__offer:hover .bundle-offers__offer-image img {
+      transform: scale(1.06);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .bundle-offers__offer,
+    .bundle-offers__offer-image img {
+      transition: none;
+    }
   }
 
   .bundle-offers__offer--highlight {
@@ -422,6 +470,12 @@
           "id": "product",
           "label": "Offer product",
           "info": "Create each bundle as its own product in Shopify admin, then select it here."
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Offer image",
+          "info": "Optional. Defaults to the offer product's featured image."
         },
         {
           "type": "text",
