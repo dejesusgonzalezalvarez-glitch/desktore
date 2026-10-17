@@ -16,6 +16,19 @@
   # Catalog cards should always load product images, never videos.
   # Prefer the first image media; keep product.featured_media when it is an image (search context).
   assign card_media = product.media | where: 'media_type', 'image'
+
+  # Technical guide images stay at the end of the product gallery and out of card carousels.
+  assign card_media_clean_count = 0
+  for media_item in card_media
+    if media_item.alt contains 'Guide'
+      break
+    endif
+    assign card_media_clean_count = card_media_clean_count | plus: 1
+  endfor
+  if card_media_clean_count > 0
+    assign card_media = card_media | slice: 0, card_media_clean_count
+  endif
+
   assign card_featured_media = product.featured_media
   if card_featured_media.media_type != 'image'
     assign card_featured_media = card_media.first

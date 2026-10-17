@@ -186,7 +186,7 @@
             "text_3MikPU": {
               "type": "text",
               "settings": {
-                "text": "<p>Soft silicone gel cushioning with a non-slip base. Available in multiple colors and sizes — a tiny upgrade your wrist will notice every day.</p>",
+                "text": "<p>Soft silicone gel cushioning with a base that grips your desk. Available in multiple colors and sizes. A tiny upgrade your wrist will notice every day.</p>",
                 "width": "fit-content",
                 "max_width": "narrow",
                 "alignment": "left",
@@ -286,7 +286,7 @@
         "text_U6VQEi": {
           "type": "text",
           "settings": {
-            "text": "<p>Because the small details are what make the difference. From wrists to wires, we hand-pick the little upgrades that quietly make your desk — and your day — feel better.</p>",
+            "text": "<p>Because the small details are what make the difference. From wrists to wires, we hand-pick the little upgrades that quietly make your desk and your day feel better.</p>",
             "width": "100%",
             "max_width": "narrow",
             "alignment": "center",
