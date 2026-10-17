@@ -1117,23 +1117,39 @@
             "description": "Mouse + keyboard wrist rest + magic cleaning cloth, all in one bundle.",
             "badge": "",
             "compare_price": 84.25,
-            "gift_note": "",
+            "gift_note": "Free magic cleaning cloth included.",
             "highlight": false,
             "default_selected": false
           }
         },
+        "offer_pro": {
+          "type": "offer",
+          "settings": {
+            "use_current_product": false,
+            "product": "the-pro-desk-setup",
+            "image": "shopify://shop_images/bundle-pro-desk-setup.jpg",
+            "title": "The Pro Desk Setup",
+            "description": "Both wrist rests + magnetic cable clips + 16 silicone cable ties + the magic cleaning cloth.",
+            "badge": "Best value",
+            "compare_price": 207.43,
+            "gift_note": "Free magic cleaning cloth included.",
+            "highlight": false,
+            "default_selected": false
+          }
+        }
       },
       "block_order": [
         "offer_single",
         "offer_duo",
-        "offer_complete"
+        "offer_complete",
+        "offer_pro"
       ],
       "settings": {
         "heading": "BUNDLES",
-        "subheading": "One-click bundles. Free US shipping on orders over $29.",
+        "subheading": "Bundle and save. Free US shipping on orders over $29.",
         "button_label": "Add to cart",
         "show_savings": true,
-        "shipping_note": "Delivery in 5-10 business days. Items in an order may arrive in separate packages.",
+        "shipping_note": "Delivery in 5 to 10 business days. Items in an order may arrive in separate packages.",
         "padding-block-start": 56,
         "padding-block-end": 56
       }
