@@ -57,22 +57,14 @@
                 assign offer_product = block.settings.product
               endif
 
-              echo '<!--dbg '
-              echo block.id
-              echo ' title='
-              echo offer_product.title
-              echo ' product='
-              echo block.settings.product | json
-              echo ' totalblocks='
-              echo section.blocks | size
-              echo '-->'
-
               if offer_product == blank
                 if request.design_mode
                   echo '<div class="bundle-offers__placeholder">Select a product for this offer</div>'
                 endif
                 continue
               endif
+
+              assign offer_variant = offer_product.selected_or_first_available_variant
 
               if offer_variant == blank
                 continue
